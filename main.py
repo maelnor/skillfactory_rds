@@ -56,9 +56,12 @@ def game_core_v3(number):
 
 
 def score_game(game_core_v1):
-    '''Запускаем игру 1000 раз, чтобы узнать, как быстро игра угадывает число'''
+    '''
+        Запускаем игру 1000 раз, чтобы узнать, как быстро игра угадывает число
+    '''
     count_ls = []
-    np.random.seed(1)  # фиксируем RANDOM SEED, чтобы ваш эксперимент был воспроизводим!
+    np.random.seed(1)  # фиксируем RANDOM SEED, чтобы ваш эксперимент был
+                       # воспроизводим!
     random_array = np.random.randint(1, 101, size=(1000))
     for number in random_array:
         count_ls.append(game_core_v1(number))
